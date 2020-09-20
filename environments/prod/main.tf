@@ -5,7 +5,7 @@ provider "azurerm" {
 
 module "az_resource_group" {
   source   = "iankesh/resource-group/azure"
-  env      = "ankesh-workspace"
+  env      = "ankesh-workspace-prod"
   location = "westeurope"
   team_tag = "DevOps"
   creator  = "ankesh"
