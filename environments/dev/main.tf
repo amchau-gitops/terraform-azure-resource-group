@@ -4,7 +4,7 @@ provider "azurerm" {
 }
 
 module "az_resource_group" {
-  source   = "../../modules/az_resource_group"
+  source   = "../../../terraform_modules"
   env      = "ankesh-workspace"
   location = "westeurope"
   team_tag = "DevOps"
