@@ -9,11 +9,14 @@ Terraform modules for everything.
 - Azurerm provider: Version v2.20.0
 
 #### Parameters to pass
-1. source:      (Required) source of this module
-2. env:         (Required) name of the resource group
-3. location:    (Required) location where this resource has to be created
-4. team_tag:    (Optional) tag a team
-5. creator:     (Optional) tag a creator
+| Parameters | Need | Description
+| ------ | ------ | ------ |
+source|(Required)|source of this module
+env|(Required)|name of the resource group
+location|(Required)|location where this resource has to be created
+team_tag|(Optional)|tag a team
+creator|(Optional)|tag a creator
+
 
 #### Usage:
 ```sh
