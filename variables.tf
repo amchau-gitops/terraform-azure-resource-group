@@ -1,4 +1,5 @@
 variable "env" {
+  dexcription = "(Required) name of the resource group"
   default = "cloud"
 }
 
@@ -11,13 +12,16 @@ variable "env" {
 # | germanywestcentral,norwayeast,norwaywest,brazilsoutheast"
 
 variable "location" {
+  description = "(Required) location where this resource has to be created"
   default = "westeurope"
 }
 
 variable "team_tag" {
+  description = "(Optional) tag a team"
   default = "DevOps"
 }
 
 variable "creator" {
-   default =   "iankesh"
+  description = "(Optional) tag a creator"
+  default =   "iankesh"
 }
