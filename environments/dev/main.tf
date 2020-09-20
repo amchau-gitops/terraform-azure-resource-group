@@ -10,3 +10,7 @@ module "az_resource_group" {
   team_tag = "DevOps"
   creator  = "ankesh"
 }
+
+output "az_rg_id" {
+  value = module.az_resource_group.az_rg_id
+}
