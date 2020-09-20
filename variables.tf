@@ -1,5 +1,5 @@
 variable "env" {
-  dexcription = "(Required) name of the resource group"
+  description = "(Required) name of the resource group"
   default = "cloud"
 }
 
