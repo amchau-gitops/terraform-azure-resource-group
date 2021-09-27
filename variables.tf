@@ -27,8 +27,8 @@ variable "client_id" {
   description = "client_id"
 }
 
-variable "client_secret" {
-  description = "client_secret"
+variable "client_certificate_path" {
+  description = "client_certificate_path"
 }
 
 variable "subscription_id" {
