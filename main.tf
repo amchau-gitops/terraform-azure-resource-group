@@ -9,3 +9,9 @@ resource "azurerm_resource_group" "az_rg" {
     Creator     = var.creator
   }
 }
+
+
+provider "azurerm" {
+  version = "=2.20.0"
+  features {}
+}
