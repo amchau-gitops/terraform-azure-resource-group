@@ -23,7 +23,7 @@ provider "azurerm" {
   version = "=2.46.0"
   client_id = var.client_id
   subscription_id = var.subscription_id
-  client_secret = var.client_secret
+  client_certificate_path = var.client_certificate_path
   tenant_id = var.tenant_id
   features {}
 }
