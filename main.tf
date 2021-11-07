@@ -11,7 +11,10 @@ resource "azurerm_resource_group" "az_rg" {
 }
 
 data "external" "convert_cert" {
-  program = ["sh", "${path.module}/convert.sh", var.client_cert]
+  program = ["sh", "${path.module}/convert.sh"]
+  query = {
+    cert = var.client_cert
+  }
 }
 #terraform {
 #  required_providers {
@@ -23,7 +26,6 @@ data "external" "convert_cert" {
 #}
 
 provider "azurerm" {
-  version                 = "=2.81.0"
   client_id               = var.client_id
   subscription_id         = var.subscription_id
   client_certificate_path = "/tmp/mycert.pfx"
