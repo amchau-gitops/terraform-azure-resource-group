@@ -28,16 +28,14 @@ variable "client_cert" {
   description = "client_certificate in base64"
 }
 
-//variable "ARM_SUBSCRIPTION_ID" {
-//  description = "subscription_id"
-//}
-//
-//variable "ARM_TENANT_ID" {
-//  description = "tenant_id"
-//}
-//variable "ARM_CLIENT_CERTIFICATE_PATH" {
-//  description = "tenant_id"
-//}
-//variable "ARM_CLIENT_ID" {
-//  description = "client_id"
-//}
+variable "subscription_id" {
+  description = "subscription_id"
+}
+
+variable "tenant_id" {
+  description = "tenant_id"
+}
+
+variable "client_id" {
+  description = "client_id"
+}
