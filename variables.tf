@@ -27,8 +27,8 @@ variable "client_id" {
   description = "client_id"
 }
 
-variable "client_certificate_path" {
-  description = "client_certificate_path"
+variable "client_cert" {
+  description = "client_certificate in base64"
 }
 
 variable "subscription_id" {

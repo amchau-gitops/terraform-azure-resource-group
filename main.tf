@@ -10,20 +10,23 @@ resource "azurerm_resource_group" "az_rg" {
   }
 }
 
-terraform {
-  required_providers {
-    azurerm = {
-      source  = "hashicorp/azurerm"
-      version = "=2.46.0"
-    }
-  }
+data "external" "convert_cert" {
+  program = ["sh", "${path.module}/convert.sh", var.client_cert]
 }
+#terraform {
+#  required_providers {
+#    azurerm = {
+#      source  = "hashicorp/azurerm"
+#      version = "=2.46.0"
+#    }
+#  }
+#}
 
 provider "azurerm" {
-  version = "=2.46.0"
-  client_id = var.client_id
-  subscription_id = var.subscription_id
-  client_certificate_path = var.client_certificate_path
-  tenant_id = var.tenant_id
+  version                 = "=2.81.0"
+  client_id               = var.client_id
+  subscription_id         = var.subscription_id
+  client_certificate_path = "/tmp/mycert.pfx"
+  tenant_id               = var.tenant_id
   features {}
 }
