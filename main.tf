@@ -10,14 +10,14 @@ resource "azurerm_resource_group" "az_rg" {
   }
 }
 
-data "external" "convert_cert" {
-  program = ["sh", "${path.module}/convert.sh"]
-  query = {
-    mpath = "${path.module}"
-    cert  = var.client_cert
-  }
-}
-#terraform {
+#data "external" "convert_cert" {
+#  program = ["sh", "${path.module}/convert.sh"]
+#  query = {
+#    mpath = "${path.module}"
+#    cert  = var.client_cert
+#  }
+#}
+##terraform {
 #  required_providers {
 #    azurerm = {
 #      source  = "hashicorp/azurerm"
@@ -29,7 +29,7 @@ data "external" "convert_cert" {
 provider "azurerm" {
   client_id               = var.client_id
   subscription_id         = var.subscription_id
-  client_certificate_path = "${path.module}/mycert.pfx"
+  client_secret             = var.client_secret
   tenant_id               = var.tenant_id
   features {}
 }

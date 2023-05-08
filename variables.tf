@@ -24,8 +24,7 @@ variable "creator" {
 }
 
 
-variable "client_cert" {
-  description = "client_certificate in base64"
+variable "client_secret" {
 }
 
 variable "subscription_id" {
